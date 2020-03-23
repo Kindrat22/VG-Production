@@ -23,6 +23,7 @@ class Dish(models.Model):
     dish_name = models.CharField(max_length=100)
     dish_category_id = models.ForeignKey(Dish_Category, on_delete=models.DO_NOTHING)
     ingredient_id = models.ManyToManyField(Dish_Ingredient)
-    receipt = models.TextField(blank=True)
+    recipe = models.TextField(blank=True)
+    dish_description = models.TextField(blank=True)
 
 
